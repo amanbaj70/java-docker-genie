@@ -63,7 +63,7 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred'){
                         sh 'docker rm -f docker-desktop'
-                        sh 'docker run --name docker-desktop -d -p 8085:8085 amanbajpai/docker-desktop:v1'
+                        sh 'docker run --name docker-desktop -d -p 8085:8080 amanbajpai/docker-desktop:v1'
                     }
                 }
             }
